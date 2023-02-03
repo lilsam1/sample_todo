@@ -7,12 +7,21 @@
 <title>Todo Read</title>
 </head>
 <body>
-	<h1>Todo Read</h1>
-		<div>
-			<div>번호 : ${dto.tno} </div>
-			<div>제목 : ${dto.title} </div>
-			<div>날짜 : ${dto.dueDate} </div>
-			<div>완료 : ${dto.finished ? "DONE" : "NOT YET"} </div>
-		</div>
+	<div>
+		<input type="text" name="tno" value="${dto.tno}" readonly>
+	</div>
+	<div>
+		<input type="text" name="title" value="${dto.title}" readonly>
+	</div>
+	<div>
+		<input type="date" name="dueDate" value="${dto.dueDate}">
+	</div>
+	<div>
+		<input type="checkbox" name="finished" ${dto.finished ? "checked" : ""} readonly>
+	</div>
+	<div>
+		<a href="./modify?tno=${dto.tno}">Modify / Remove</a>
+		<a href="./list">List</a>
+	</div>
 </body>
 </html>
