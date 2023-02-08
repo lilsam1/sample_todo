@@ -19,5 +19,11 @@
 			</li>
 		</c:forEach>
 	</ul>
+	<div><a href="./register">REGISTER</a></div>
+	
+	<form action="./logout" method="post">
+		<button>LOGUT</button>
+	</form>
+	
 </body>
 </html>
